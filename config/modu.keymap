@@ -92,7 +92,7 @@
             // |LCTL| A  | S  | D  | F  | G  |   | H  | J  | K  | L  | ;  | '  |
             // |LALT| Z  | X  | C  | V  | B  |   | N  | M  | ,  | .  | /  |LGUI|
             // |MO3 | -  | TDL|                                 | TDR| =  |MO3 |
-            //          |LT(1,BKSP)|LSFT|LT(2,ENTR)|   |LT(2,BKSP)|SPC |MO(3)|----|
+            //          |LT(1,BKSP)|LSFT|LT(2,ENTR)|   |LT(2,BKSP)|SPC |MO(3)| B  |
             //
             // TD | name     | tap | hold 160ms | double-tap <160ms
             // TDL| td_lbrc  |  [  |     {      |        (
@@ -104,7 +104,7 @@
 &kp LCTRL  &kp A      &kp S            &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L            &kp SEMI   &kp SQT
 &kp LALT   &kp Z      &kp X            &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp DOT          &kp FSLH   &kp LGUI
 &mo 3      &kp MINUS  &td_lbrc LBRC 0  &none   &none   &none   &none   &none   &none      &td_rbrc RBRC 0  &kp EQUAL  &mo 3
-&lt 1 BSPC  &kp LSHFT  &lt 2 RET  &lt 2 BSPC  &kp SPACE  &mo 3  &none
+&lt 1 BSPC  &kp LSHFT  &lt 2 RET  &lt 2 BSPC  &kp SPACE  &mo 3  &kp B
             >;
         };
 
