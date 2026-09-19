@@ -24,18 +24,18 @@
 
 / {
     behaviors {
-        // Tap side: 1 tap = [ , 2 taps = ( (250 ms double-tap window)
+        // Tap side: 1 tap = [ , 2 taps = ( (220 ms double-tap window)
         tap_lbkt: tap_lbkt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             bindings = <&kp LBKT>, <&kp LPAR>;
         };
 
         tap_rbkt: tap_rbkt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             bindings = <&kp RBKT>, <&kp RPAR>;
         };
 
@@ -49,13 +49,13 @@
             bindings = <&kp>, <&kp>;
         };
 
-        // Outer: hold 200 ms = { / } , otherwise hand off to the tap-dance above.
+        // Outer: hold 190 ms = { / } , otherwise hand off to the tap-dance above.
         // Used as "&td_lbrc LBRC 0" - the 0 is a dummy param for the 0-cell tap-dance.
         td_lbrc: td_lbrc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <190>;
             bindings = <&kp>, <&tap_lbkt>;
         };
 
@@ -63,7 +63,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <190>;
             bindings = <&kp>, <&tap_rbkt>;
         };
     };
@@ -113,7 +113,7 @@
             // |MO3 |*-  | TDL|                                 | TDR|*=  |MO3 |
             //          |LT(1,BKSP)|LSFT|LT(2,ENTR)|   |LT(2,BKSP)|SPC |MO3| B  |
             //
-            // TD | name     | tap | hold 200ms | double-tap <250ms
+            // TD | name     | tap | hold 190ms | double-tap <220ms
             // TDL| td_lbrc  |  [  |     {      |        (
             // TDR| td_rbrc  |  ]  |     }      |        )
 
