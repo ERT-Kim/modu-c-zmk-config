@@ -28,14 +28,14 @@
         tap_lbkt: tap_lbkt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <230>;
+            tapping-term-ms = <240>;
             bindings = <&kp LBKT>, <&kp LPAR>;
         };
 
         tap_rbkt: tap_rbkt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <230>;
+            tapping-term-ms = <240>;
             bindings = <&kp RBKT>, <&kp RPAR>;
         };
 
